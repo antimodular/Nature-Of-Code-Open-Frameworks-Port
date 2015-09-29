@@ -59,10 +59,11 @@ int CA::rules(int a, int b, int c)
     sstm << a << b << c;
     string result = sstm.str();
     int decimal = 0;
-    for(int counter = 0; counter < result.size(); counter++)
+    for(double counter = 0; counter < result.size(); counter++)
     {
-        if(result.c_str()[counter] == '1')
+        if(result.c_str()[(int)counter] == '1')
             decimal += pow(2, counter);
+   
     }
 
     // std::cout << "Rules value: " << a << b << c << " Decimal: " << decimal << ".\n";
